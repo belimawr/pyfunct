@@ -104,6 +104,9 @@ class SplinterBrowserDriver(BaseBrowserDriver):
     def get_element_by_tag(self, selector):
         return self._browser.find_by_tag(selector)
 
+    def get_element_by_text(self, selector):
+        return self._browser.find_by_text(selector)
+
     @element_action
     def type(self, element, text, slowly=False):
         return element.type(text, slowly)

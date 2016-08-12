@@ -58,7 +58,8 @@ class BaseBrowserDriver(object):
             'xpath': self.get_element_by_xpath,
             'css': self.get_element_by_css,
             'id': self.get_element_by_id,
-            'tag': self.get_element_by_tag
+            'tag': self.get_element_by_tag,
+            'text': self.get_element_by_text,
         }
 
     @property
@@ -277,6 +278,13 @@ class BaseBrowserDriver(object):
         """
         raise NotImplementedError(
             "This browser doesn't support getting elements by tag")
+
+    def get_element_by_text(self, selector):
+        """
+            Gets an element, selecting it by it's text.
+        """
+        raise NotImplementedError(
+            "This browser doesn't support getting elements by text")
 
     def type(self, element, text, slowly=False):
         """
