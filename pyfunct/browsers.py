@@ -290,7 +290,8 @@ class BaseBrowserDriver(object):
         """
             Enters text into an input element. If slowly is `True`, it will
             press one key at a time, simulating a user input.
-            If the element already contains text, this action will append additional text to it.
+            If the element already contains text, this action will append
+            additional text to it.
         """
         raise NotImplementedError(
             "This browser doesn't support typing texts into elements.")
@@ -298,7 +299,8 @@ class BaseBrowserDriver(object):
     def fill(self, element, text):
         """
             Fills the given element with the text specified.
-            If the element already contains text, this action will delete it and replace it with whatever is specified in the text parameter.
+            If the element already contains text, this action will delete it
+            and replace it with whatever is specified in the text parameter.
         """
 
         raise NotImplementedError(
@@ -356,8 +358,8 @@ class BaseBrowserDriver(object):
             "This browser doesn't support clicking an element and waiting")
 
     def clear_session(self):
-      """
-        Clears the browser session
-      """
-      raise NotImplementedError(
-        "This browser does not support clearing the session")
+        """
+            Clears the browser session
+        """
+        raise NotImplementedError(
+            "This browser does not support clearing the session")
