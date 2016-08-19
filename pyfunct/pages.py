@@ -70,7 +70,7 @@ class Page(object):
             raise SelectorTypeNotSupportedException
 
         if alias in cls.elements.keys():
-          raise ExistentElementException(alias)
+            raise ExistentElementException(alias)
 
         cls.elements[alias] = {
             'selector': selector,
